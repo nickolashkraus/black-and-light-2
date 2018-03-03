@@ -3,6 +3,7 @@
 <section id=content>
   <ul class=posts_listing>
     {{ range .Data.Pages.ByPublishDate }}
+    {{ if and (ne .Title "About") (ne .Title "Resume")}}
       <li>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <div id=date>
@@ -10,8 +11,8 @@
         </div>
       </li>
     {{ end }}
+    {{ end }}
   </ul>
 </section>
 
 {{ partial "footer.html" . }}
-
