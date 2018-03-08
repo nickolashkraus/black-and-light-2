@@ -122,24 +122,21 @@
 
   blockquote {
     font-family:"Old Standard TT",serif;
-    text-align:center;
-    padding:50px;
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+  }
+
+  blockquote > :first-child {
+    margin-top: 0;
+  }
+
+  blockquote > :last-child {
+    margin-bottom: 0;
   }
 
   blockquote p {
-    display:inline-block;
-    font-style:italic;
-  }
-
-  blockquote:before,blockquote:after {
-    font-family:"Old Standard TT",serif;
-    content:'\201C';
-    font-size:35px;
-    color:#403c3b;
-  }
-
-  blockquote:after {
-    content:'\201D';
+    display: inline-block;
+    font-style: italic;
   }
 
   hr {
@@ -276,6 +273,7 @@
 
   .social {
     text-align: center;
+    padding: 25px;
   }
 
   #nav {
