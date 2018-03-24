@@ -1,6 +1,6 @@
 # Black & Light
 
-A High contrast, text oriented, performant and Javascript-free theme for Hugo.
+A high contrast, text oriented, performant and Javascript-free theme for Hugo.
 
 ## Features
 * Loads in a single request (with web-fonts disabled).
