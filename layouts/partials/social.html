@@ -11,6 +11,10 @@
     <a href="{{ . }}">LinkedIn</a>
   {{ end }}
   |
+  {{ with .Site.Params.social.stackoverflow }}
+    <a href="{{ . }}">Stack Overflow</a>
+  {{ end }}
+  |
   {{ with .Site.Params.social.twitter }}
     <a href="{{ . }}">Twitter</a>
   {{ end }}
