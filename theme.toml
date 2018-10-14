@@ -1,12 +1,18 @@
-name = "Black & Light"
-license = "MIT License"
-licenselink = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme/blob/master/LICENSE"
-description = ""
-homepage = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme"
+name = "Black & Light 2"
+license = "MIT"
+licenselink = "https://github.com/NickolasHKraus/black-and-light-2/blob/master/LICENSE"
+description = "
+A beautiful, high contrast, text-oriented theme for Hugo. Black & Light 2 is hyper-performant, JavaScript-free, and fully open-source!"
+homepage = "https://black-and-light-2.io"
 tags = []
 features = []
-min_version = 0.17
+min_version = "0.41"
 
 [author]
+  name = "Nickolas Kraus"
+  homepage = "https://nickolaskraus.org"
+
+[original]
   name = "David Hamp-Gonsalves"
   homepage = "https://davidhampgonsalves.com"
+  repo = "https://github.com/davidhampgonsalves/hugo-black-and-light-theme"

@@ -19,6 +19,10 @@ git submodule add git@github.com:NickolasHKraus/black-and-light-2.git themes/bla
 
 Copy the [`config.toml`](https://github.com/NickolasHKraus/black-and-light-2/blob/master/exampleSite/config.toml) from the `exampleSite` directory of this theme to the root directory of your Hugo site.
 
+## Acknowledgments
+
+This is a clean fork of David Hamp-Gonsalves's [Black & Light](https://github.com/davidhampgonsalves/hugo-black-and-light-theme).
+
 
 ## License
 
