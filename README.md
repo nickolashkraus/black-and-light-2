@@ -1,5 +1,5 @@
 # Black & Light 2
-A beautiful, high contrast, text-oriented theme for Hugo. Black & Light 2 is hyper-performant, JavaScript-free, and fully open-source!
+A beautifully simple, high contrast, text-oriented theme for Hugo. Black & Light 2 is hyper-performant, JavaScript-free, and fully open-source!
 
 ## Features
 
