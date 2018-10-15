@@ -1,5 +1,4 @@
 # Black & Light 2
-
 A beautiful, high contrast, text-oriented theme for Hugo. Black & Light 2 is hyper-performant, JavaScript-free, and fully open-source!
 
 ## Features
@@ -16,14 +15,10 @@ git submodule add git@github.com:NickolasHKraus/black-and-light-2.git themes/bla
 ```
 
 ## Configuration
-
 Copy the [`config.toml`](https://github.com/NickolasHKraus/black-and-light-2/blob/master/exampleSite/config.toml) from the `exampleSite` directory of this theme to the root directory of your Hugo site.
 
 ## Acknowledgments
-
 This is a clean fork of David Hamp-Gonsalves's [Black & Light](https://github.com/davidhampgonsalves/hugo-black-and-light-theme).
 
-
 ## License
-
 This theme is released under MIT License. For more information, the full license can be found [here](https://github.com/NickolasHKraus/black-and-light-2/blob/master/LICENSE).
