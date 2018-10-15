@@ -3,19 +3,15 @@
 <section id=content>
   <ul class=posts_listing>
     {{ range .Data.Pages.ByPublishDate.Reverse }}
-      {{ if eq .Title "About" }}
-        {{ .Content }}
-      {{ else }}
-        <li>
-          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-          <div id=date>
-            <time>{{ .Date.Format (.Site.Params.dateFormat | default "January 2006") }}</time>
-          </div>
-          <div id=description>
-            {{ .Description }}
-          </div>
-        </li>
-      {{ end }}
+      <li>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div id=date>
+          <time>{{ .Date.Format (.Site.Params.dateFormat | default "January 2006") }}</time>
+        </div>
+        <div id=description>
+          {{ .Description }}
+        </div>
+      </li>
     {{ end }}
   </ul>
 </section>

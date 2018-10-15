@@ -1,0 +1,10 @@
+{{ partial "header.html" . }}
+
+<section id=content>
+  <div class="entry-content">
+    {{ with .Site.GetPage "about/about.md" }}
+      {{ .Content }}
+    {{ end }}
+  </div>
+
+{{ partial "footer.html" . }}
