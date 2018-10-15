@@ -17,6 +17,9 @@ git submodule add git@github.com:NickolasHKraus/black-and-light-2.git themes/bla
 ## Configuration
 Copy the [`config.toml`](https://github.com/NickolasHKraus/black-and-light-2/blob/master/exampleSite/config.toml) from the `exampleSite` directory of this theme to the root directory of your Hugo site.
 
+### Changing the favicon
+Black & Light 2 comes with a default favicon (`favicon.png`). To use your own favicon, simply create `favicon.png` in the `static` directory of your Hugo website. When running `hugo`, the favicon located at `static/favicon.png` will overwrite the favicon located at `themes/black-and-light-2/static/favicon.png`.
+
 ## Acknowledgments
 This is a clean fork of David Hamp-Gonsalves's [Black & Light](https://github.com/davidhampgonsalves/hugo-black-and-light-theme).
 
