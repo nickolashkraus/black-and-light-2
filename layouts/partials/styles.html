@@ -7,7 +7,6 @@
     margin: 0;
     padding: 0;
     color: black;
-    text-decoration-skip: ink;
 }
 
 body {
@@ -73,6 +72,11 @@ pre>code {
     white-space: pre;
     background: transparent;
     border: 0;
+}
+
+/* override text-decoration: underline set by Chroma */
+pre>code>span {
+    text-decoration: none !important;
 }
 
 pre code {
