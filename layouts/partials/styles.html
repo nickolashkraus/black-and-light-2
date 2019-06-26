@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Open Sans', 'Myriad Pro', Myriad, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     line-height: 160%;
     color: #1d1313;
@@ -42,16 +42,20 @@ img {
 }
 
 pre, code {
-    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
-    background-color: #f7f7f7;
+    font: 12px 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', 'monospace';
+    background-color: #e8e8e8;
 }
 
 code {
+    border-radius: 3px;
     font-size: 12px;
     padding: 4px;
 }
 
 pre {
+    border-radius: 3px;
+    /* override background-color set by Chroma */
+    background-color: #e8e8e8 !important;
     margin-top: 0;
     margin-bottom: 16px;
     word-wrap: normal;
@@ -93,27 +97,27 @@ em, q, em, dfn {
 }
 
 .sans, html .gist .gist-file .gist-meta {
-    font-family: "Open Sans", "Myriad Pro", Myriad, sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .mono, pre, code, tt, p code, li code {
-    font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
+    font-family: 'Menlo', 'Monaco', 'Andale Mono', 'lucida console', 'Courier New', 'monospace';
 }
 
-.heading, .serif, h1, h2, h3, h4 {
-    font-family: "Old Standard TT", serif;
+.heading, .serif, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Old Standard TT', serif;
 }
 
 strong {
-    font-weight: 800;
+    font-weight: 600;
 }
 
 q:before {
-    content: "\201C";
+    content: '\201C';
 }
 
 q:after {
-    content: "\201D";
+    content: '\201D';
 }
 
 del, s {
@@ -121,7 +125,7 @@ del, s {
 }
 
 blockquote.prose {
-    font-family: "Old Standard TT", serif;
+    font-family: 'Old Standard TT', serif;
     border-left: 0px;
     text-align: center;
     padding: 25px 0px 5px;
@@ -129,7 +133,7 @@ blockquote.prose {
 }
 
 blockquote {
-    font-family: "Old Standard TT", serif;
+    font-family: 'Old Standard TT', serif;
     border-left: 4px solid #dddddd;
     padding: 0 15px;
 }
@@ -150,7 +154,7 @@ blockquote p {
 hr {
     width: 40%;
     height: 1px;
-    background: #403c3b;
+    background-color: #e8e8e8;
     margin: 25px auto;
 }
 
@@ -262,7 +266,7 @@ ul li {
 }
 
 ul li:before {
-    content: "\00BB \0020";
+    content: '\00BB \0020';
 }
 
 #nav ul li:before, .posts_listing li:before {
@@ -355,7 +359,7 @@ ul li:before {
 }
 
 #not-found a {
-    font-family: "Old Standard TT", serif;
+    font-family: 'Old Standard TT', serif;
     font-size: 200px;
     text-decoration: none;
     display: inline-block;
