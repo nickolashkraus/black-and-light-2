@@ -12,6 +12,11 @@
         <div id=description>
           {{ .Description }}
         </div>
+        {{ if .Params.author }}
+        <div id=author>
+          by {{ .Params.author }}
+        </div>
+        {{ end  }}
       </li>
     {{ end }}
     {{ end }}
