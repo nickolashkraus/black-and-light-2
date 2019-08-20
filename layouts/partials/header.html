@@ -31,9 +31,12 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{ partial "styles.html" . }}
+
     {{ if eq .Site.Params.mode "dark" }}
       {{ partial "styles-dark.html" . }}
-    {{ else }}
+    {{ end  }}
+
+    {{ if eq .Site.Params.mode "light" }}
       {{ partial "styles-light.html" . }}
     {{ end  }}
 
