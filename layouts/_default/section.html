@@ -16,11 +16,11 @@
 {{ partial "header.html" . }}
 <section id="content">
   <ul class="posts-listing">
+    {{ range .Data.Pages.ByPublishDate.Reverse }}
     <li>
-      {{ range .Data.Pages.ByPublishDate.Reverse }}
       {{ .Render "summary" }}
-      {{ end }}
     </li>
+    {{ end }}
   </ul>
 </section>
 {{ partial "footer.html" . }}
