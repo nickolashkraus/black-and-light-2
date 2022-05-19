@@ -1,30 +1,26 @@
-{{ partial "header.html" . }}
+<!--
+  section.html (layouts/_default/section.html)
 
-<section id=content>
-  <ul class=posts_listing>
-    {{ range .Data.Pages.ByPublishDate.Reverse }}
-      <li>
-        {{ if .Params.Redirect }}
-        <h2><a href="{{ .Params.Redirect}}">{{ .Title }}</a></h2>
-        {{ else }}
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        {{ end }}
-        {{ if .Date }}
-        <div id=date>
-          <time>{{ .Date.Format (.Site.Params.dateFormat | default "January 2006") }}</time>
-        </div>
-        {{ end }}
-        <div id=description>
-          {{ .Description }}
-        </div>
-        {{ if .Params.author }}
-        <div id=author>
-          by {{ .Params.author }}
-        </div>
-        {{ end  }}
-      </li>
-    {{ end }}
+  Section view template.
+
+  Templates used for section pages are lists and therefore have all the
+  variables and methods available to list pages.
+
+  A list page template is a template used to render multiple pieces of content
+  in a single HTML page.
+
+  Documentation:
+    * https://gohugo.io/templates/section-templates
+    * https://gohugo.io/templates/lists
+-->
+{{ partial "header.html" . }}
+<section id="content">
+  <ul class="posts-listing">
+    <li>
+      {{ range .Data.Pages.ByPublishDate.Reverse }}
+      {{ .Render "summary" }}
+      {{ end }}
+    </li>
   </ul>
 </section>
-
 {{ partial "footer.html" . }}
