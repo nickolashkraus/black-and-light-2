@@ -1,3 +1,4 @@
+{{ define "main" }}
 <!--
   section.html (layouts/_default/section.html)
 
@@ -13,7 +14,6 @@
     * https://gohugo.io/templates/section-templates
     * https://gohugo.io/templates/lists
 -->
-{{ partial "header.html" . }}
 <section id="content">
   <ul class="posts-listing">
     {{ range .Data.Pages.ByPublishDate.Reverse }}
@@ -23,4 +23,4 @@
     {{ end }}
   </ul>
 </section>
-{{ partial "footer.html" . }}
+{{ end }}

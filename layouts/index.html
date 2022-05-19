@@ -1,3 +1,4 @@
+{{ define "main" }}
 <!--
   index.html (layouts/index.html)
 
@@ -6,7 +7,6 @@
   Documentation:
     * https://gohugo.io/templates/section-templates/#page-kinds
 -->
-{{ partial "header.html" . }}
 <section id="content">
   <ul class="posts-listing">
     {{ range .Site.RegularPages }}
@@ -18,4 +18,4 @@
     {{ end }}
   </ul>
 </section>
-{{ partial "footer.html" . }}
+{{ end }}

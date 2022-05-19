@@ -6,11 +6,9 @@
   Documentation:
     * https://gohugo.io/templates/404
 -->
-{{ partial "header.html" . }}
 <section id="not-found">
   <a href=/>404</a>
   {{ if (fileExists "static/404.png") }}
   <img src="404.png" alt="404">
   {{ end }}
 </section>
-{{ partial "footer.html" . }}

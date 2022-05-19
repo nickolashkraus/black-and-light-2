@@ -1,3 +1,4 @@
+{{ define "main" }}
 <!--
   single.html (layouts/_default/single.html)
 
@@ -11,7 +12,6 @@
   Documentation:
     * https://gohugo.io/templates/single-page-templates
 -->
-{{ partial "header.html" . }}
 <section id="content">
   <h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
   <div id="sub-header">
@@ -27,4 +27,4 @@
     {{ .Content }}
   </div>
 </section>
-{{ partial "footer.html" . }}
+{{ end }}

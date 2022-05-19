@@ -1,9 +1,9 @@
+{{ define "main" }}
 <!--
   about.html (layouts/_default/about.html)
 
   Single page template for 'About' page.
 -->
-{{ partial "header.html" . }}
 <div class="about">
   <img src="img/about.png" alt="about"/>
   <section id="content">
@@ -16,4 +16,4 @@
 </div>
 <hr>
 {{ partial "social.html" . }}
-{{ partial "footer.html" . }}
+{{ end }}
