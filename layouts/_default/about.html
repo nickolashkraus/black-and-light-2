@@ -5,13 +5,14 @@
 -->
 {{ partial "header.html" . }}
 <div class="about">
-  <img src="img/about.png"/>
+  <img src="img/about.png" alt="about"/>
   <section id="content">
     <div class="entry-content">
       {{ with .Site.GetPage "about/about.md" }}
       {{ .Content }}
       {{ end }}
     </div>
+  </section>
 </div>
 <hr>
 {{ partial "social.html" . }}
