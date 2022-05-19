@@ -1,0 +1,44 @@
+<!--
+  summary.html (layouts/_default/summary.html)
+
+  Summary view template.
+
+  A generated summary of the content for easily showing a snippet in a summary
+  view. The breakpoint can be set manually by inserting 'more' as a comment at
+  the appropriate place in the content page, or the summary can be written
+  independent of the page text as is done here.
+
+  Hugo passes the entire page object to the summary.html view template.
+
+  To use this template add a 'description' to the content front matter.
+
+  Documentation:
+    * https://gohugo.io/content-management/summaries
+    * https://gohugo.io/variables/page
+    * https://gohugo.io/templates/views/#summaryhtml
+-->
+<div>
+  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  {{ if .Params.date }}
+  <div id="date">
+    <time>{{ .Date.Format (.Site.Params.dateFormat | default "January 2006") }}</time>
+  </div>
+  {{ end  }}
+  <div class="description">
+    {{ .Params.description }}
+  </div>
+  {{ if .Params.author }}
+  <div class="author">
+    by {{ .Params.author }}
+  </div>
+  {{ end  }}
+  {{ if .Params.tags }}
+  <div class="tags">
+    {{ range $tag := .Params.tags }}
+    <a href="/tags/{{ $tag }}">{{ $tag }}</a>
+    <!-- This is a hack to add separators between tags. -->
+    <span></span>
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
