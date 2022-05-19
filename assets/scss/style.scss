@@ -273,7 +273,7 @@ table tr th :last-child, table tr td :last-child {
     line-height: 120%;
 }
 
-.posts_listing a, #nav a {
+.posts-listing a, #nav a {
     text-decoration: none;
 }
 
@@ -293,7 +293,7 @@ ul li:before {
     content: '\00BB \0020';
 }
 
-#nav ul li:before, .posts_listing li:before {
+#nav ul li:before, .posts-listing li:before {
     content: '';
     margin-right: 0px;
 }
@@ -343,15 +343,15 @@ ul li:before {
     margin: 10px 0px;
 }
 
-.posts_listing {
+.posts-listing {
     margin-bottom: 25px;
 }
 
-.posts_listing li {
+.posts-listing li {
     margin: 0px 0px 25px 15px;
 }
 
-.posts_listing li a:hover, #nav a:hover {
+.posts-listing li a:hover, #nav a:hover {
     text-decoration: underline;
 }
 
@@ -391,6 +391,10 @@ ul li:before {
 // CSS for custom 404 page.
 #not-found {
     text-align: center;
+}
+
+.about #content {
+    padding: 0px;
 }
 
 #not-found a {
@@ -441,7 +445,7 @@ ul li:before {
         font-size: 20px;
     }
 
-    .posts_listing li div {
+    .posts-listing li div {
         font-size: 12px;
     }
 
@@ -484,7 +488,7 @@ ul li:before {
         font-size: 16px;
     }
 
-    .posts_listing li div {
+    .posts-listing li div {
         font-size: 12px;
     }
 
