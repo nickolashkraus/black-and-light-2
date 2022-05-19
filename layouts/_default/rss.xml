@@ -1,3 +1,14 @@
+<!--
+  rss.xml (layouts/_default/rss.xml)
+
+  RSS template.
+
+  Hugo ships with its own RSS 2.0 template that requires almost no
+  configuration, or you can create your own RSS templates.
+
+  Documentation:
+    * https://gohugo.io/templates/rss
+-->
 {{- $pctx := . -}}
 {{- if .IsHome -}}{{ $pctx = .Site }}{{- end -}}
 {{- $pages := slice -}}
