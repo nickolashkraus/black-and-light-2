@@ -1,45 +1,61 @@
+// Variables
+$primary:   #1d1313; // - (29,19,19)
+$secondary: #f8f8f8; // - (248,248,248)
+$tertiary:  #403c3b; // - (64,60,59)
+$gray80:    #cccccc; // Gray80 (204,204,204)
+$black:     #000000; // Black (0,0,0)
+$white:     #ffffff; // White (255,255,255)
+
+// The * selector selects all elements.
 * {
-    border: 0;
+    color: $black;
     font: inherit;
     font-size: 100%;
     vertical-align: baseline;
-    margin: 0;
-    padding: 0;
-    color: black;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
+// The <body> tag defines the document's body.
+//
+// The <body> element contains all the contents of an HTML document, such as
+// headings, paragraphs, images, hyperlinks, tables, lists, etc.
 body {
-    font-family: 'Open Sans', sans-serif;
+    color: $primary;
     font-size: 17px;
+    font-family: 'Open Sans', 'Sans-serif';
     line-height: 160%;
-    color: #1d1313;
     max-width: 700px;
     margin: auto;
 }
 
-mark {
-    background-color: #f8f8f8;
-}
-
-p {
-    margin: 20px 0;
-}
-
-a img {
+// The <a> tag defines a hyperlink, which is used to link from one page to
+// another.
+a {
+    text-decoration: underline;
     border: none;
 }
 
-img {
-    margin: 10px auto 10px auto;
-    max-width: 100%;
-    display: block;
+// The <p> tag defines a paragraph.
+p {
+    margin: 20px 0px;
 }
 
-.about img {
+// The <img> tag is used to embed an image in an HTML page.
+img {
+    display: block;
     text-align: center;
-    padding: 50px;
-    width: 70%;
+    border: none;
     border-radius: 55px;
+    width: 70%;
+    margin: 10px auto 10px auto; // top, right, bottom, left
+    padding: 50px;
+}
+
+// The <mark> tag defines text that should be marked or highlighted.
+mark {
+    background-color: $secondary;
 }
 
 .left-justify {
@@ -51,47 +67,48 @@ img {
 }
 
 pre, code {
-    font: 12px 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', 'monospace';
-    background-color: #f8f8f8;
-}
-
-code {
-    border-radius: 3px;
-    font-size: 12px;
-    padding: 4px;
+    background-color: $secondary;
+    font: 12px;
+    font-family: 'Consolas', 'Liberation Mono', 'Menlo', 'Courier', 'Monospace';
 }
 
 pre {
-    border-radius: 3px;
-    margin-top: 0;
-    margin-bottom: 16px;
-    word-wrap: normal;
-    padding: 16px;
-    overflow: auto;
     font-size: 85%;
     line-height: 1.45;
+    overflow: auto;
+    word-wrap: normal;
+    border-radius: 3px;
+    margin-top: 0px;
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+code {
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 4px;
 }
 
 pre>code {
-    padding: 0;
-    margin: 0;
     font-size: 100%;
-    word-break: normal;
+    background-color: transparent;
     white-space: pre;
-    background: transparent;
-    border: 0;
+    word-break: normal;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 pre code {
     display: inline;
-    max-width: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    line-height: inherit;
-    word-wrap: normal;
     background-color: transparent;
-    border: 0;
+    line-height: inherit;
+    overflow: visible;
+    word-wrap: normal;
+    border: 0px;
+    max-width: auto;
+    margin: 0px;
+    padding: 0px;
 }
 
 pre code::before,
@@ -104,15 +121,15 @@ em, q, em, dfn {
 }
 
 .sans, html .gist .gist-file .gist-meta {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', 'Sans-serif';
 }
 
 .mono, pre, code, tt, p code, li code {
-    font-family: 'Menlo', 'Monaco', 'Andale Mono', 'lucida console', 'Courier New', 'monospace';
+    font-family: 'Menlo', 'Monaco', 'Andale Mono', 'Lucida Console', 'Courier New', 'Monospace';
 }
 
 .heading, .serif, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Old Standard TT', serif;
+    font-family: 'Old Standard TT', 'Serif';
 }
 
 strong {
@@ -132,25 +149,25 @@ del, s {
 }
 
 blockquote.prose {
-    font-family: 'Old Standard TT', serif;
-    border-left: 0px;
+    font-family: 'Old Standard TT', 'Serif';
+    font-style: italic;
     text-align: center;
+    border-left: 0px;
     padding: 25px 0px 5px;
-    font-style: italic
 }
 
 blockquote {
-    font-family: 'Old Standard TT', serif;
+    font-family: 'Old Standard TT', 'Serif';
     border-left: 4px solid #dddddd;
-    padding: 0 15px;
+    padding: 0px 15px;
 }
 
 blockquote> :first-child {
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 blockquote> :last-child {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 blockquote p {
@@ -159,15 +176,15 @@ blockquote p {
 }
 
 hr {
-    width: 40%;
+    background-color: $primary;
     height: 1px;
-    background-color: #000000;
+    width: 40%;
     margin: 25px auto;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 20px 0 10px;
-    padding: 0;
+    margin: 20px 0px 10px;
+    padding: 0px;
 }
 
 h1 {
@@ -203,15 +220,15 @@ h1, h2 {
 }
 
 table {
-    padding: 0;
     border-collapse: collapse;
+    padding: 0px;
 }
 
 table tr {
-    border-top: 1px solid #cccccc;
-    background-color: white;
-    margin: 0;
-    padding: 0;
+    background-color: $white;
+    border-top: 1px solid $gray80;
+    margin: 0px;
+    padding: 0px;
 }
 
 table tr:nth-child(2n) {
@@ -220,39 +237,39 @@ table tr:nth-child(2n) {
 
 table tr th {
     font-weight: bold;
-    border: 1px solid #cccccc;
     text-align: left;
-    margin: 0;
+    border: 1px solid $gray80;
+    margin: 0px;
     padding: 6px 13px;
 }
 
 table tr td {
-    border: 1px solid #cccccc;
     text-align: left;
-    margin: 0;
+    border: 1px solid $gray80;
+    margin: 0px;
     padding: 6px 13px;
 }
 
 table tr th :first-child, table tr td :first-child {
-    margin-top: 0;
+    margin-top: 0px;
 }
 
 table tr th :last-child, table tr td :last-child {
-    margin-bottom: 0;
+    margin-bottom: 0px;
 }
 
 #sub-header, time {
-    color: #403c3b;
+    color: $tertiary;
     font-size: 13px;
 }
 
 #sub-header {
-    margin: 0 4px;
+    margin: 0px 4px;
 }
 
 #nav h1 a {
+    color: $primary;
     font-size: 35px;
-    color: #1d1313;
     line-height: 120%;
 }
 
@@ -278,20 +295,14 @@ ul li:before {
 
 #nav ul li:before, .posts_listing li:before {
     content: '';
-    margin-right: 0;
-}
-
-#author {
-    margin-left: 3px;
-    color: #403c3b;
-    font-size: 13px;
+    margin-right: 0px;
 }
 
 #content {
+    font-size: 15px;
     text-align: left;
     width: 100%;
-    font-size: 15px;
-    padding: 60px 0 60px 0;
+    padding: 60px 0px 60px 0px;
 }
 
 #content h1, #content h2 {
@@ -314,14 +325,22 @@ ul li:before {
     font-size: 30px;
 }
 
-#description {
-    margin-left: 3px;
-    color: #403c3b;
+.author, .description, .tags a {
+    color: $tertiary;
     font-size: 13px;
+    margin-left: 3px;
+}
+
+// This is a hack to add separators between tags.
+.tags span:not(:last-child):after {
+    content: "•";
+    color: $tertiary;
+    font-size: 13px;
+    margin-left: 3px;
 }
 
 .highlight {
-    margin: 10px 0;
+    margin: 10px 0px;
 }
 
 .posts_listing {
@@ -329,7 +348,7 @@ ul li:before {
 }
 
 .posts_listing li {
-    margin: 0 0 25px 15px;
+    margin: 0px 0px 25px 15px;
 }
 
 .posts_listing li a:hover, #nav a:hover {
@@ -337,56 +356,59 @@ ul li:before {
 }
 
 .social {
-    text-align: center;
-    padding-bottom: 25px;
     font-size: 15px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 #nav {
-    text-align: center;
     position: static;
+    text-align: center;
     margin-top: 60px;
 }
 
 #nav ul {
     display: table;
-    margin: 8px auto 0 auto;
+    margin: 8px auto 0px auto;
 }
 
 #nav li {
-    list-style-type: none;
     display: table-cell;
     font-size: 15px;
-    padding: 0 20px;
+    list-style-type: none;
+    padding: 0px 20px;
 }
 
 #links {
-    margin: 50px 0 0 0;
+    margin: 50px 0px 0px 0px;
 }
 
 #links :nth-child(2) {
     float: right;
 }
 
+// CSS for custom 404 page.
 #not-found {
     text-align: center;
 }
 
 #not-found a {
-    font-family: 'Old Standard TT', serif;
-    font-size: 100px;
-    text-decoration: none;
     display: inline-block;
+    font-size: 100px;
+    font-family: 'Old Standard TT', 'Serif';
+    text-decoration: none;
     padding-top: 100px;
-    padding-bottom: 50px;
+    padding-bottom: 25px;
 }
 
 #not-found img {
-    width: 75px;
     transform: rotate(90deg);
+    width: 75px;
 }
 
-@media (max-width: 750px) {
+// Small: <768px, ≥576px
+@media (max-width: 767px) {
     body {
         padding-left: 20px;
         padding-right: 20px;
@@ -398,13 +420,13 @@ ul li:before {
 
     #nav li {
         font-size: 13px;
-        padding: 0 15px;
+        padding: 0px 15px;
     }
 
     #content {
-        margin-top: 0;
-        padding-top: 50px;
         font-size: 14px;
+        margin-top: 0px;
+        padding-top: 50px;
     }
 
     #content h1 {
@@ -428,7 +450,8 @@ ul li:before {
     }
 }
 
-@media (max-width: 400px) {
+// X-Small: <576px
+@media (max-width: 575px) {
     body {
         padding-left: 20px;
         padding-right: 20px;
@@ -440,13 +463,13 @@ ul li:before {
 
     #nav li {
         font-size: 12px;
-        padding: 0 10px;
+        padding: 0px 10px;
     }
 
     #content {
-        margin-top: 0;
-        padding-top: 20px;
         font-size: 12px;
+        margin-top: 0px;
+        padding-top: 20px;
     }
 
     #content h1 {
