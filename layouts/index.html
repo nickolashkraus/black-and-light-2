@@ -1,26 +1,21 @@
-{{ partial "header.html" . }}
+<!--
+  index.html (layouts/index.html)
 
-<section id=content>
-  <ul class=posts_listing>
+  Landing page for the 'Home' page.
+
+  Documentation:
+    * https://gohugo.io/templates/section-templates/#page-kinds
+-->
+{{ partial "header.html" . }}
+<section id="content">
+  <ul class="posts-listing">
     {{ range .Site.RegularPages }}
-      {{ if eq .Section "articles" }}
-      <li>
-        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <div id=date>
-          <time>{{ .Date.Format (.Site.Params.dateFormat | default "January 2006") }}</time>
-        </div>
-        <div id=description>
-          {{ .Description }}
-        </div>
-        {{ if .Params.author }}
-        <div id=author>
-          by {{ .Params.author }}
-        </div>
-        {{ end  }}
-      </li>
+    {{ if eq .Section "articles" }}
+    <li>
+      {{ .Render "summary" }}
+    </li>
     {{ end }}
     {{ end }}
   </ul>
 </section>
-
 {{ partial "footer.html" . }}
