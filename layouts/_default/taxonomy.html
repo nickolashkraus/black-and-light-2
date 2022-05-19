@@ -1,0 +1,23 @@
+<!--
+  taxonomy.html (layouts/_default/taxonomy.html)
+
+  Taxonomy view template.
+
+  Hugo includes support for user-defined groupings of content called
+  taxonomies. Taxonomies are classifications that demonstrate logical
+  relationships between content.
+
+  Documentation:
+    * https://gohugo.io/templates/taxonomy-templates
+-->
+{{ partial "header.html" . }}
+<section id="content">
+  <ul class="posts-listing">
+    {{ range .Data.Pages.ByPublishDate.Reverse }}
+    <li>
+      {{ .Render "summary" }}
+    </li>
+    {{ end }}
+  </ul>
+</section>
+{{ partial "footer.html" . }}
