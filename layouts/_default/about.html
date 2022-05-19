@@ -1,17 +1,18 @@
+<!--
+  about.html (layouts/_default/about.html)
+
+  Single page template for 'About' page.
+-->
 {{ partial "header.html" . }}
-
-
-<div class=about>
+<div class="about">
   <img src="img/about.png"/>
-  <section id=content style="padding: 0;">
+  <section id="content">
     <div class="entry-content">
       {{ with .Site.GetPage "about/about.md" }}
       {{ .Content }}
       {{ end }}
     </div>
 </div>
-
 <hr>
-
 {{ partial "social.html" . }}
 {{ partial "footer.html" . }}
