@@ -325,7 +325,7 @@ ul li:before {
     font-size: 30px;
 }
 
-.author, .description, .tags a {
+.author, .description, .tags a, .social a {
     color: $tertiary;
     font-size: 13px;
     margin-left: 3px;
@@ -333,6 +333,14 @@ ul li:before {
 
 // This is a hack to add separators between tags.
 .tags span:not(:last-child):after {
+    content: "•";
+    color: $tertiary;
+    font-size: 13px;
+    margin-left: 3px;
+}
+
+// This is a hack to add separators between social.
+.social span:not(:last-child):after {
     content: "•";
     color: $tertiary;
     font-size: 13px;

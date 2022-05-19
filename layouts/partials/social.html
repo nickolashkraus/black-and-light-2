@@ -1,21 +1,14 @@
-<section id="social" class="social">
-  {{ range .Site.Params.social }}
-    <a href="{{ .email }}">Email</a>
-    |
-    <a href="{{ .github }}">GitHub</a>
-    |
-    <a href="{{ .linkedin }}">LinkedIn</a>
-    |
-    <a href="{{ .stackoverflow }}">Stack Overflow</a>
-    |
-    <a href="{{ .instagram }}">Instagram</a>
-    |
-    <a href="{{ .twitter }}">Twitter</a>
-    |
-    <a href="{{ .garmin }}">Garmin</a>
-    |
-    <a href="{{ .strava }}">Strava</a>
-    |
-    <a href="{{ .rss }}">RSS</a>
+<!--
+  social.html (layouts/partials/social.html)
+
+  Partial template for social links.
+-->
+{{ if .Site.Data.social }}
+<div class="social">
+    {{ range .Site.Data.social }}
+    <a target="_blank" rel="noreferrer" href="{{ .url }}">{{ .name }}</a>
+    <!-- This is a hack to add separators between tags. -->
+    <span></span>
     {{ end }}
-</section>
+</div>
+{{ end }}
