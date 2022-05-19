@@ -1,9 +1,20 @@
+<!--
+  single.html (layouts/_default/single.html)
+
+  Single view template.
+
+  The primary view of content in Hugo is the single view. Hugo will render
+  every Markdown file provided with a corresponding single template.
+
+  The default location for a single page is _default/single.html.
+
+  Documentation:
+    * https://gohugo.io/templates/single-page-templates
+-->
 {{ partial "header.html" . }}
-
-<section id=content>
-  <h1>{{ if .Params.heading }} {{ .Params.heading }} {{ else }} {{ .Title }} {{ end }}</h1>
-
-  <div id=sub-header>
+<section id="content">
+  <h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
+  <div id="sub-header">
     {{ if .Date }}
     {{ .Date.Format (.Site.Params.dateform | default "January 2006") }} · {{ .ReadingTime }} minutes
     {{ end }}
@@ -12,11 +23,8 @@
     by {{ .Params.author }}
     {{ end }}
   </div>
-
   <div class="entry-content">
     {{ .Content }}
   </div>
-
 </section>
-
 {{ partial "footer.html" . }}
