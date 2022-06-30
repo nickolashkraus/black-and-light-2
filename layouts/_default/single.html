@@ -16,7 +16,7 @@
   <h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
   <div id="sub-header">
     {{ if .Date }}
-    {{ .Date.Format (.Site.Params.dateform | default "January 2006") }} · {{ .ReadingTime }} minutes
+    {{ .Date.Format (.Site.Params.dateFormat | default "January 2006") }} · {{ .ReadingTime }} minutes
     {{ end }}
     {{ if .Params.author }}
     <br>
