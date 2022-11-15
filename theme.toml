@@ -9,9 +9,9 @@
 
 name = "Black & Light 2"
 license = "MIT"
-licenselink = "https://github.com/NickolasHKraus/black-and-light-2/blob/master/LICENSE"
+licenselink = "https://github.com/nickolashkraus/black-and-light-2/blob/master/LICENSE"
 description = "A beautifully simple, high contrast, text-oriented theme for Hugo. Black & Light 2 is hyper-performant, JavaScript-free, and fully open-source!"
-homepage = "https://github.com/NickolasHKraus/black-and-light-2"
+homepage = "https://github.com/nickolashkraus/black-and-light-2"
 demosite = "https://nickolaskraus.io"
 tags = []
 features = []

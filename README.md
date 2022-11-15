@@ -1,6 +1,6 @@
 # Black & Light 2
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/NickolasHKraus/black-and-light-2/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/nickolashkraus/black-and-light-2/blob/master/LICENSE)
 
 A beautifully simple, high contrast, text-oriented theme for Hugo. Black & Light 2 is hyper-performant, JavaScript-free, and fully open-source!
 
@@ -14,12 +14,12 @@ A beautifully simple, high contrast, text-oriented theme for Hugo. Black & Light
 ## Installation
 
 ```bash
-git submodule add git@github.com:NickolasHKraus/black-and-light-2.git themes/black-and-light-2
+git submodule add git@github.com:nickolashkraus/black-and-light-2.git themes/black-and-light-2
 ```
 
 ## Configuration
 
-Copy the [`config.toml`](https://github.com/NickolasHKraus/black-and-light-2/blob/master/exampleSite/config.toml) from the `exampleSite` directory of this theme to the root directory of your Hugo site.
+Copy the [`config.toml`](https://github.com/nickolashkraus/black-and-light-2/blob/master/exampleSite/config.toml) from the `exampleSite` directory of this theme to the root directory of your Hugo site.
 
 ### Changing the favicon
 
@@ -35,4 +35,4 @@ This is a fork of David Hamp-Gonsalves's [Black & Light](https://github.com/davi
 
 ## License
 
-This theme is released under MIT License. For more information, the full license can be found [here](https://github.com/NickolasHKraus/black-and-light-2/blob/master/LICENSE).
+This theme is released under MIT License. For more information, the full license can be found [here](https://github.com/nickolashkraus/black-and-light-2/blob/master/LICENSE).
