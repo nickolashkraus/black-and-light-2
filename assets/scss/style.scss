@@ -227,6 +227,10 @@ table {
     padding: 0px;
 }
 
+.font-size-12px table {
+    font-size: 12px;
+}
+
 table tr {
     background-color: $white;
     border-top: 1px solid $gray80;
