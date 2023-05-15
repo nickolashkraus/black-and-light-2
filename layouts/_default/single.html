@@ -23,8 +23,14 @@
     by {{ .Params.author }}
     {{ end }}
   </div>
+  {{ if .Params.table }}
+  <div class="entry-content-table">
+    {{ .Content }}
+  </div>
+  {{ else  }}
   <div class="entry-content">
     {{ .Content }}
   </div>
+  {{ end }}
 </section>
 {{ end }}
