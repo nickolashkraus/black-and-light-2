@@ -227,10 +227,6 @@ table {
     padding: 0px;
 }
 
-.font-size-12px table {
-    font-size: 12px;
-}
-
 table tr {
     background-color: $white;
     border-top: 1px solid $gray80;
@@ -324,18 +320,23 @@ ul li:before {
     margin-top: 15px;
 }
 
-#content .entry-content-table {
-    font-size: 12px;
-    text-align: center;
-    width: 115%;
-}
-
 #content time {
     margin-left: 3px;
 }
 
 #content h1 {
     font-size: 30px;
+}
+
+#content .entry-content-table {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+
+    // Center table within container.
+    table {
+        margin: auto;
+    }
 }
 
 #section-header {

@@ -1,16 +1,8 @@
 {{ define "main" }}
 <!--
-  single.html (layouts/_default/single.html)
+  table.html (layouts/_default/table.html)
 
-  Single view template.
-
-  The primary view of content in Hugo is the single view. Hugo will render
-  every Markdown file provided with a corresponding single template.
-
-  The default location for a single page is _default/single.html.
-
-  Documentation:
-    * https://gohugo.io/templates/single-page-templates
+  Single view template for displaying tables.
 -->
 <section id="content">
   <h1>{{ if .Params.heading }}{{ .Params.heading }}{{ else }}{{ .Title }}{{ end }}</h1>
@@ -23,7 +15,7 @@
     by {{ .Params.author }}
     {{ end }}
   </div>
-  <div class="entry-content">
+  <div class="entry-content-table">
     {{ .Content }}
   </div>
 </section>
