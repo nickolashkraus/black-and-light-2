@@ -5,7 +5,8 @@
   Single page template for 'About' page.
 -->
 <div class="about">
-  <img src="img/about.png" alt="about" style="width: 70%"/>
+  <!-- TODO: Move styling to style.scss -->
+  <img src="img/about.png" alt="about" style="border-radius: 55px; width: 70%; padding: 50px;"/>
   <section id="content">
     <div class="entry-content">
       {{ with .Site.GetPage "about/about.md" }}
