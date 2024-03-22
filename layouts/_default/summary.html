@@ -18,7 +18,13 @@
     * https://gohugo.io/templates/views/#summaryhtml
 -->
 <div>
-  <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+  <h2>
+    {{ if .Params.externalLink }}
+    <a href="{{ .Params.externalLink }}" target="_blank" rel="noopener noreferrer">{{ .Title }}</a>
+    {{ else }}
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    {{ end }}
+  </h2>
   {{ if .Params.date }}
   <div id="date">
     <time>{{ .Date.Format (.Site.Params.dateFormat | default "January 2006") }}</time>
