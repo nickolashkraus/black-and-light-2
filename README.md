@@ -1,7 +1,5 @@
 # Black & Light 2
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/nickolashkraus/black-and-light-2/blob/master/LICENSE)
-
 A beautifully simple, high contrast, text-oriented theme for Hugo. Black & Light 2 is hyper-performant, JavaScript-free, and fully open-source!
 
 ## Features
