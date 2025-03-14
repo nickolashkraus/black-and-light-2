@@ -7,16 +7,14 @@
 #   * https://github.com/gohugoio/hugoThemes#themetoml
 ###############################################################################
 
-name = "Black & Light 2"
-license = "MIT"
-licenselink = "https://github.com/nickolashkraus/black-and-light-2/blob/master/LICENSE"
-description = "A beautifully simple, high contrast, text-oriented theme for Hugo. Black & Light 2 is hyper-performant, JavaScript-free, and fully open-source!"
-homepage = "https://github.com/nickolashkraus/black-and-light-2"
-demosite = "https://nickolaskraus.io"
-tags = []
-features = []
-min_version = "0.55.0"
+name = 'Black & Light 2'
+license = 'MIT'
+licenselink = 'https://github.com/nickolashkraus/black-and-light-2/blob/master/LICENSE'
+description = 'A beautifully simple, high contrast, text-oriented theme for Hugo. Black & Light 2 is hyper-performant, JavaScript-free, and fully open-source!'
+
+homepage = 'https://github.com/nickolashkraus/black-and-light-2'
+demosite = 'https://nickolaskraus.io'
 
 [author]
-  name = "Nickolas Kraus"
-  homepage = "https://nickolaskraus.io"
+  name = 'Nickolas Kraus'
+  homepage = 'https://nickolaskraus.io'
