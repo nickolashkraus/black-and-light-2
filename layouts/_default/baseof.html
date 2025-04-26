@@ -91,15 +91,19 @@
 
       Source: https://gohugo.io/hugo-pipes/scss-sass
     -->
-    {{ if .Site.IsServer }}
+    {{ if hugo.IsServer }}
     {{ $sassTemplate := resources.Get "scss/style.scss" }}
-    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "style.scss" . | resources.ToCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
+    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "style.scss" . | css.Sass (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
     <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
     {{ else }}
     {{ $sassTemplate := resources.Get "scss/style.scss" }}
-    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "style.scss" . | resources.ToCSS (dict "targetPath" "css/style.css" "enableSourceMap" false ) }}
+    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "style.scss" . | css.Sass (dict "targetPath" "css/style.css" "enableSourceMap" false ) }}
     <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">
     {{ end }}
+
+    {{ $sassTemplate := resources.Get "scss/syntax.scss" }}
+    {{ $style := $sassTemplate | resources.ExecuteAsTemplate "syntax.scss" . | css.Sass (dict "targetPath" "css/syntax.css" "enableSourceMap" true) }}
+    <link rel="stylesheet" href="{{ ($style).RelPermalink }}">
 
     <!--
       Meta Tags
@@ -123,7 +127,7 @@
       <meta property="og:url" content="{{ .Permalink }}">
       <meta name="twitter:card" content="summary">
       <meta name="twitter:creator" content="{{ .Site.Params.seo.meta_twitter_creator }}">
-      <meta name="twitter:description" content="{{ .Site.Params.seo.meta_twitter_creator }}">
+      <meta name="twitter:description" content="{{ .Site.Params.seo.meta_twitter_description }}">
       <meta name="twitter:image" content="{{ .Site.Params.seo.meta_twitter_image }}">
       <meta name="twitter:site" content="{{ .Site.Params.seo.meta_twitter_site }}">
       <meta name="twitter:title" content="{{ .Site.Params.seo.meta_twitter_title }}">
@@ -132,7 +136,7 @@
 
   <body>
     <section id=nav>
-      <h1><a href="/">{{ .Site.Params.sitename }}</a></h1>
+      <h1><a href="/">{{ .Site.Title }}</a></h1>
       <ul>
         {{ range .Site.Menus.main }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
